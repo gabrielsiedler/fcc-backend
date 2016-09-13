@@ -33,4 +33,6 @@ app.get('/:input', (req, res) => {
   res.json({ unix: null, natural: null });
 });
 
-app.listen(8080);
+app.listen(8080, function () {
+  console.log('Server running on', 8080);
+});
