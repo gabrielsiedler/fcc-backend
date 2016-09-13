@@ -1,13 +1,14 @@
 const express = require('express');
 const moment = require('moment');
+const path = require('path');
 
-var app = express();
+var router = express.Router();
 
-app.use(express.static('public/'));
-app.use(express.static('node_modules/bootstrap/dist'));
-app.use(express.static('node_modules/font-awesome'));
+router.use(express.static(path.join(__dirname, '/public')));
+router.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+router.use(express.static(path.join(__dirname, 'node_modules/font-awesome')));
 
-app.get('/:input', (req, res) => {
+router.get('/:input', (req, res) => {
   const input = req.params.input;
 
   if (/^\d+$/.test(input)) {
@@ -33,6 +34,4 @@ app.get('/:input', (req, res) => {
   res.json({ unix: null, natural: null });
 });
 
-app.listen(8080, function () {
-  console.log('Server running on', 8080);
-});
+module.exports = router;
