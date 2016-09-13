@@ -1,0 +1,29 @@
+{
+  "name": "fcc-timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp Microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabrielsiedler/fcc-backend.git"
+  },
+  "author": "Gabriel Siedler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielsiedler/fcc-backend/issues"
+  },
+  "homepage": "https://github.com/gabrielsiedler/fcc-backend#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3",
+    "moment": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}

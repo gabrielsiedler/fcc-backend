@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>FreeCodeCamp Backend - Timestamp API</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-paper.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="javascript:;"><i class="fa fa-clock-o"></i> Timestamp API</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 header">
+            <h3><i class="fa fa-arrow-circle-right"></i> Request</h3>
+            <hr/>
+        </div>
+        <div class="col-sm-3">
+          <h4>Method</h4>
+          <pre><strong>GET</strong></pre>
+        </div>
+        <div class="col-sm-9">
+          <h4>URL</h4>
+          <pre><strong>API</strong>/{timestamp}</pre>
+          <em><strong>{timestamp}</strong>: UNIX (ex. "1475204400") or Natural (ex. "September 30, 2016") date</em>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 header padding-top">
+            <h3><i class="fa fa-arrow-circle-left"></i> Response</h3>
+            <hr/>
+        </div>
+        <div class="col-sm-3">
+          <h4>Status</h4>
+          <pre><strong>200</strong></pre>
+        </div>
+        <div class="col-sm-9">
+          <h4>Response</h4>
+          <pre>{
+    "unix": {unixDate},
+    "natural": {naturalDate}
+}</pre>
+          <em><strong>{unixDate}</strong>: Date in Unix format (ex. 1475204400)</em>
+          <em><strong>{naturalDate}</strong>: Date in Natural format (ex. December 12, 2016)</em><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>Status</h4>
+          <pre><strong>200</strong></pre>
+        </div>
+        <div class="col-sm-9">
+          <h4>Response</h4>
+          <pre>{
+    "unix": null,
+    "natural": null
+}</pre>
+          <em><strong>*</strong> Returned when data is not a valid date in the Natural or Unix format.</em><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 header padding-top">
+            <h3><i class="fa fa-question-circle"></i> Example</h3>
+            <hr/>
+        </div>
+        <div class="col-sm-3">
+          <h4>Requisition</h4>
+          <pre><strong>API/</strong>1450137600</pre>
+        </div>
+        <div class="col-sm-9">
+          <h4>Response</h4>
+          <pre>{
+    "unix": "1450137600",
+    "natural": "December 14, 2015"
+}</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>Requisition</h4>
+          <pre><strong>API/</strong>invalid</pre>
+        </div>
+        <div class="col-sm-9">
+          <h4>Response</h4>
+          <pre>{
+    "unix": null,
+    "natural": null
+}</pre>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="pull-right">
+                <a href="https://github.com/gabrielsiedler/fcc-backend" target="_blank"><i class="fa fa-2x fa-github"></i></a>
+                <a href="http://gabriel.siedler.ninja" target="_blank"><i class="fa fa-2x fa-user"></i></a>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
