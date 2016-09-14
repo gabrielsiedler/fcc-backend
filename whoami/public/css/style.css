@@ -1,0 +1,18 @@
+.padding-top {
+    padding-top: 35px;
+}
+
+.header .fa {
+    color: #00bc8c;
+}
+
+footer {
+    font-size: 14px;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer .fa {
+    margin-right: 5px;
+}
