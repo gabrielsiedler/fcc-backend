@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
   const language = req.headers["accept-language"];
   const software = req.headers['user-agent'];
 
-  homeMadeTemplateEngine.run('public/index.html', { ip, language, software }, data => {
+  homeMadeTemplateEngine.run('public/view.html', { ip, language, software }, data => {
     res.send(data);
   });
 });
