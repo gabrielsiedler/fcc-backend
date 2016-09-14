@@ -20,6 +20,10 @@ const homeMadeTemplateEngine = {
   }
 };
 
+router.use(express.static(path.join(__dirname, '/public')));
+router.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+router.use(express.static(path.join(__dirname, 'node_modules/font-awesome')));
+
 router.get('/', (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const language = req.headers["accept-language"];
@@ -30,8 +34,5 @@ router.get('/', (req, res) => {
   });
 });
 
-router.use(express.static(path.join(__dirname, '/public')));
-router.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
-router.use(express.static(path.join(__dirname, 'node_modules/font-awesome')));
 
 module.exports = router;
